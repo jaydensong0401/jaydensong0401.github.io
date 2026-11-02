@@ -1,2 +1,41 @@
-# jaydensong0401.github.io
-Jayden Song · Service planning, AI workflow design and web project portfolio
+# Jayden Song · Public Portfolio
+
+서비스 기획·업무 자동화·AI 프로토타입 프로젝트를 소개하는 공개 웹사이트입니다.
+
+## 사이트
+
+https://jaydensong0401.github.io/
+
+| 경로 | 프로젝트 |
+| --- | --- |
+| `/` | 소개·프로젝트 목록·작업 방식 |
+| `/mailwork/` | 메일 요청을 업무로 연결하는 AI 업무 도구 |
+| `/llm-wiki/` | 조건·근거·정책 변경을 관리하는 업무용 AI |
+| `/visitor-system/` | QR 현장 등록·사전 방문 신청·관리자 운영 |
+
+## 구성
+
+- 별도 빌드가 필요 없는 HTML·CSS·JavaScript 사이트입니다.
+- GitHub Pages: `main` 브랜치의 `/ (root)`에서 게시합니다.
+- `.nojekyll`을 사용합니다.
+- 공통 스타일과 동작: `assets/site.css`, `assets/site.js`.
+- 프로젝트별 페이지: 각 폴더의 `index.html`.
+- 새 프로젝트는 폴더를 만들고 메인 페이지에 링크를 추가하면 됩니다.
+
+## 공개 자료의 범위
+
+공개용으로 정리한 소개 페이지와 가상 데이터 화면, 설명용 자료만 포함합니다.
+운영 앱 소스 전체, 실제 메일·방문·정책 원장, DB, 계정과 인증 정보는 포함하지 않습니다.
+
+- Mailwork 화면: 공개 샘플의 가상 데이터 데모 캡처.
+- LLM Wiki 자료: 2026-10-26 작성한 예시 데이터 기반 소개 자료 8장.
+- 방문자 관리 화면: 원본 템플릿에 가상 데이터만 사용한 캡처.
+- 문서에 기재한 기능 확인과 실사용 성과 측정은 서로 다른 범위입니다.
+
+## 로컬 확인
+
+```sh
+python -m http.server 8787 --bind 127.0.0.1
+```
+
+정리일: 2026-11-02.
