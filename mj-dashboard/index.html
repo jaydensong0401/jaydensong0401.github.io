@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <link rel="canonical" href="https://jaydensong0401.github.io/mj-dashboard/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2457eb">
+  <meta name="description" content="흩어진 일과 기록을 하나의 흐름으로 연결한 개인 작업 공간, MJ Dashboard. 정보 구조와 원본 연결, 저장·복구 정책을 다룬 제품 기획 사례입니다.">
+  <title>MJ Dashboard — 흩어진 일과 기록을, 하나의 흐름으로.</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 이동</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="MJ Dashboard 사례 처음"><span class="brand-mark" aria-hidden="true">mj.</span><span>MJ Dashboard<span class="brand-sub">PRODUCT CASE STUDY</span></span></a>
+    <nav aria-label="주요 장"><a href="#structure">기획 판단</a><a href="#connected">원본 연결</a><a href="#evidence">검증</a></nav>
+    <a class="all-projects" href="../">사례 목록 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="hero section-shell" id="top" aria-labelledby="hero-title">
+      <div class="hero-heading"><p class="eyebrow"><span></span> PERSONAL WORKSPACE · PRODUCT PLANNING</p><h1 id="hero-title">흩어진 일과 기록을,<br><span>하나의 흐름으로.</span></h1><div class="hero-bottom"><p class="hero-intro">일정과 메모부터 이메일, 투자, 콘텐츠 작업까지.<br>함께 파악하고, 이어서 실행하는 개인 작업 공간을 만들었습니다.</p><a class="round-link" href="#problem" aria-label="프로젝트 이야기 읽기"><span aria-hidden="true">↓</span></a></div></div>
+      <div class="hero-stage">
+        <div class="stage-note"><span>ONE WORKSPACE.<br>MANY CONNECTED VIEWS.</span><span class="stage-coordinate">01 — OVERVIEW</span></div>
+        <figure class="desktop-shot"><button class="image-button" data-lightbox data-caption="실제 샘플 화면 · 2026.11.03 · 예시 데이터, 체험 변경은 저장되지 않음 · 그라파이트 테마 · 샘플 뉴스 미조회" aria-label="PC 홈 화면 크게 보기"><img src="assets/home-desktop.jpg" alt="다가오는 일정과 영역별 현황을 함께 보여주는 MJ Dashboard PC 홈의 실제 샘플 화면" width="1440" height="1000" fetchpriority="high"></button><figcaption>PC · 홈에서 전체 현황 파악</figcaption></figure>
+        <figure class="mobile-shot"><button class="image-button" data-lightbox data-caption="실제 샘플 화면 · 2026.11.03 · 예시 데이터, 체험 변경은 저장되지 않음 · 그라파이트 테마 · 샘플 뉴스 미조회" aria-label="모바일 홈 화면 크게 보기"><img src="assets/home-mobile.jpg" alt="일정과 요약을 세로로 배치한 MJ Dashboard 모바일 홈의 실제 샘플 화면" width="390" height="844"></button><figcaption>MOBILE · 같은 기록, 다른 밀도</figcaption></figure>
+        <p class="stage-footnote">실제 샘플 화면 · 2026.11.03 · 예시 데이터, 체험 변경은 저장되지 않음 · 샘플 뉴스 미조회</p>
+      </div>
+      <dl class="project-facts"><div><dt>제품</dt><dd>개인 업무를 연결하는 작업 공간</dd></div><div><dt>다룬 범위</dt><dd>제품 기획 · 구현 · 검증 · 운영</dd></div><div><dt>핵심 관점</dt><dd>정보 구조 · 원본 연결 · 상태와 복구</dd></div></dl>
+    </section>
+
+    <nav class="chapter-nav" aria-label="전체 목차"><div><a href="#problem"><span>01</span> 출발점</a><a href="#structure"><span>02</span> 홈과 상세</a><a href="#connected"><span>03</span> 원본 연결</a><a href="#trust"><span>04</span> 저장과 복구</a><a href="#consistent"><span>05</span> 반복 개선</a><a href="#evidence"><span>06</span> 검증</a><a href="#reflection"><span>07</span> 다음 단계</a></div></nav>
+
+    <section class="chapter section-shell" id="problem" aria-labelledby="problem-title">
+      <div class="chapter-heading"><p class="eyebrow">01 / THE STARTING POINT</p><h2 id="problem-title">정보를 모은 다음,<br>무엇부터 보여줄까?</h2><p class="section-intro">한곳에 모인 정보가 곧 명확한 하루는 아니었습니다. 첫 화면의 목적부터 정했습니다.</p></div>
+      <div class="problem-layout"><p class="large-paragraph">일정은 달력에,<br>할 일은 메모에,<br>진행 상황은 여러 도구에.<br><strong>판단은 여전히<br>사람의 몫이었습니다.</strong></p><div class="problem-copy"><p>개인 업무에서 출발한 문제였습니다. 일정과 메일, 프로젝트를 모아도 긴 목록과 편집 기능이 한 화면에 쌓이면 무엇부터 봐야 할지 다시 골라야 합니다.</p><p>그래서 첫 화면은 <strong>지금 확인할 일을 파악하는 곳</strong>으로, 상세는 각 업무를 처리하는 곳으로 구분했습니다. 기능을 늘리는 과정에서도 이 역할을 기준으로 우선순위를 정했습니다.</p><div class="decision-note"><span>기획의 출발점</span><p>“모든 기능을 보여주기”보다<br>“다음 행동을 찾을 수 있게 하기”.</p></div></div></div>
+      <div class="product-map" aria-label="제품의 네 가지 업무 묶음"><div><span class="map-index">01</span><h3>오늘의 업무</h3><p>홈 · 일정과 할 일 · 메모</p></div><div><span class="map-index">02</span><h3>정보 확인</h3><p>이메일 · AI·AX 소식</p></div><div><span class="map-index">03</span><h3>기록과 실행</h3><p>프로젝트 · 투자 · 스튜디오 · 포트폴리오</p></div><div><span class="map-index">04</span><h3>운영 도구</h3><p>설정 · 데이터와 백업 · AI 사용량</p></div></div>
+      <p class="caption">개인 사용 맥락에서 세운 문제 가설입니다. 별도 사용자 인터뷰나 생산성 효과 측정으로 일반화하지 않았습니다.</p>
+    </section>
+
+    <section class="chapter chapter-tinted" id="structure" aria-labelledby="structure-title"><div class="section-shell">
+      <div class="split-heading"><div class="chapter-heading"><p class="eyebrow">02 / INFORMATION ARCHITECTURE</p><h2 id="structure-title">홈에서는 파악하고,<br>상세에서 실행합니다.</h2></div><p>확인과 편집은 필요한 정보량이 다릅니다. 홈의 요약을 출발점으로 두고, 선택한 날짜와 출처를 이어받아 상세로 연결했습니다.</p></div>
+      <div class="view-comparison"><article class="overview-view"><div class="view-label"><span>HOME</span><span>핵심 현황</span></div><h3>오늘, 무엇을 확인할까?</h3><div class="mini-agenda"><div><span>오늘</span><strong>포트폴리오 소개 문안 검토</strong><small>메모 · 예정일</small></div><div><span>내일</span><strong>프로젝트 진행 상황 정리</strong><small>AX · 목표일</small></div></div><div class="mini-summary"><span>메모 <b>3</b></span><span>진행 프로젝트 <b>2</b></span></div><p>가까운 일정 · 영역별 요약 · 상세 이동</p></article><div class="connection-arrow" aria-hidden="true">→</div><article class="detail-view"><div class="view-label"><span>DETAIL</span><span>맥락을 이어서</span></div><h3>선택한 일을 이어서 처리하기</h3><div class="mini-filter"><span>일정 관리</span><span>선택한 날짜 유지</span></div><div class="mini-editor"><small>메모 · 연결된 원본</small><strong>포트폴리오 소개 문안 검토</strong><p>핵심 사례와 검증 범위를 확인하고<br>첫 문단을 다듬습니다.</p><span>검색 · 필터 · 내용 수정</span></div><p>상세 목록 · 원문 확인 · 편집과 관리</p></article></div>
+      <p class="caption">가상 데이터로 재구성한 설명용 화면입니다. 실제 제품의 홈·상세 역할과 이동 기준을 표현했습니다.</p>
+      <div class="three-principles"><div><span>01</span><h3>홈에는 필요한 만큼</h3><p>전체 목록과 편집 폼을 쌓기보다 가까운 일과 핵심 상태를 요약합니다.</p></div><div><span>02</span><h3>상세에는 실행 도구</h3><p>검색·필터·수정은 해당 업무 화면에 모아 작업에 집중하도록 합니다.</p></div><div><span>03</span><h3>이동해도 같은 맥락</h3><p>날짜와 출처를 이어받아 방금 본 대상을 다시 찾는 과정을 줄이도록 설계했습니다.</p></div></div>
+    </div></section>
+
+    <section class="chapter section-shell" id="connected" aria-labelledby="connected-title">
+      <div class="chapter-heading"><p class="eyebrow">03 / ONE SOURCE, CONNECTED VIEWS</p><h2 id="connected-title">보는 곳은 여러 곳.<br>기록의 원본은 하나.</h2><p class="section-intro">메모의 예정일, 프로젝트의 목표일, 해커톤의 마감일을 일정에 다시 입력하면 내용과 상태가 어긋날 수 있습니다.</p></div>
+      <div class="source-diagram"><div class="source-record"><span class="source-tag">원본 1건</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 3h12l5 5v21H8zM20 3v7h5M12 15h9M12 20h9M12 25h6"/></svg><h3>포트폴리오 소개<br>문안 검토</h3><p>날짜가 지정된 메모</p><span class="source-id">같은 식별자 · 같은 내용 · 같은 상태</span></div><div class="source-lines" aria-hidden="true"><span></span><span></span><span></span></div><div class="connected-views"><div><span>01</span><h3>홈</h3><p>다가오는 일로 파악</p></div><div><span>02</span><h3>달력</h3><p>날짜와 출처로 확인</p></div><div><span>03</span><h3>할 일</h3><p>완료 여부를 관리</p></div></div></div>
+      <ol class="scenario-steps"><li><span>STEP 01</span><h3>날짜를 지정하면</h3><p>메모를 일정용 보기로 연결합니다. 별도의 일정 사본을 만들지 않습니다.</p></li><li><span>STEP 02</span><h3>목적에 맞게 보고</h3><p>홈·달력·할 일이 같은 원본을 각 화면의 방식으로 보여줍니다.</p></li><li><span>STEP 03</span><h3>변경도 함께 확인</h3><p>수정과 완료가 원본에 반영됩니다. 제목이 같아도 별개 기록은 합치지 않습니다.</p></li></ol>
+      <p class="caption">설명용 가상 시나리오 · 실제 사용 후기나 효과 측정 결과가 아닙니다. 날짜 연결을 해제해도 메모 원본은 남습니다.</p>
+    </section>
+
+    <section class="chapter trust-section" id="trust" aria-labelledby="trust-title"><div class="section-shell">
+      <div class="split-heading"><div class="chapter-heading"><p class="eyebrow">04 / STATES & RECOVERY</p><h2 id="trust-title">저장 버튼 다음의<br>상황까지 설계했습니다.</h2></div><p>개인 기록을 맡기는 제품이라면 성공뿐 아니라 충돌과 실패도 설명할 수 있어야 합니다. 저장 여부와 복구 상태를 나눠 판단했습니다.</p></div>
+      <div class="state-showcase"><article><span class="state-icon success" aria-hidden="true">✓</span><span class="state-category">정상 저장</span><h3>변경 내용을<br>저장했습니다.</h3><p>현재 버전으로 저장하고 복구 지점의 상태를 확인합니다.</p></article><article><span class="state-icon conflict" aria-hidden="true">↔</span><span class="state-category">다른 화면과 충돌</span><h3>다른 화면에서<br>먼저 변경했습니다.</h3><p>오래된 버전으로 덮어쓰지 않고 새로고침 후 판단하도록 안내합니다.</p></article><article><span class="state-icon pending" aria-hidden="true">◷</span><span class="state-category">백업 확정 대기</span><h3>기록은 저장됐고,<br>백업 확인이 남았습니다.</h3><p>이미 끝난 저장을 실패로 안내하지 않고 백업 대기를 구분합니다.</p></article></div>
+      <p class="caption">상태 정책을 재구성한 설명용 문구·도식입니다. 운영 데이터에 오류를 발생시킨 화면이 아닙니다.</p>
+      <div class="policy-table-wrap"><table class="policy-table"><caption>상황마다 다른 처리 기준</caption><thead><tr><th scope="col">상황</th><th scope="col">판단과 처리</th><th scope="col">지키려는 기준</th></tr></thead><tbody><tr><th scope="row">저장 전 백업 실패</th><td>원본 변경 전에 저장 중단</td><td>변경 전 복구 가능성</td></tr><tr><th scope="row">조회 실패 · 손상된 기록</th><td>빈 기록으로 초기화하지 않고 실패 안내</td><td>모르는 상태를 0건으로 바꾸지 않기</td></tr><tr><th scope="row">외부 서비스 연결 전</th><td>미연결과 실제 조회 결과를 구분</td><td>데이터의 출처와 상태</td></tr><tr><th scope="row">공개 샘플 체험</th><td>개인 저장·외부 계정과 분리</td><td>체험이 개인 기록을 바꾸지 않기</td></tr></tbody></table></div>
+      <details class="evidence-details"><summary>백업과 샘플의 범위 더 보기 <span aria-hidden="true">+</span></summary><div><p>일상 저장의 자동 복구 지점과 첨부파일까지 담는 전체 백업은 범위가 다릅니다. 외부 메일함·계좌·캘린더 전체를 백업하는 기능으로 소개하지 않습니다.</p><p>샘플의 변경은 화면 메모리에만 적용되며 새로고침하면 초기화됩니다. 샘플 화면 확인과 인증된 개인 서버 저장 검증은 별도로 구분합니다.</p></div></details>
+    </div></section>
+
+    <section class="chapter section-shell" id="consistent" aria-labelledby="consistent-title">
+      <div class="chapter-heading"><p class="eyebrow">05 / CONTINUOUS REFINEMENT</p><h2 id="consistent-title">기능이 늘어도,<br>사용 경험은 일관되게.</h2><p class="section-intro">화면을 더하는 일만큼 반복되는 조작을 정리했습니다. 정보량과 입력 규격, 처음 불러오는 코드까지 개선 대상으로 삼았습니다.</p></div>
+      <div class="refinement-grid"><article class="refinement-copy"><span class="small-kicker">DENSITY & INTERACTION</span><h3>화면 크기에 맞춰<br>읽고 조작하는 순서를.</h3><p>PC의 일정·뉴스는 나란히, 작은 화면에서는 순서대로 배치했습니다. 접힌 요약에서도 전체 항목에 접근할 수 있게 했습니다.</p><p>모바일 작성은 현재 페이지와 탭에 맞는 단일 +로 연결하고, 입력·버튼의 크기와 역할을 공통 규격으로 정리했습니다.</p><div class="ui-specimen" aria-label="입력과 버튼 규격의 설명용 예시"><div class="sample-input">예정일과 메모를 입력하세요<span>16px</span></div><div class="sample-buttons"><span class="sample-primary">저장</span><span class="sample-secondary">취소</span><span class="touch-spec">모바일 조작 영역 44px</span></div></div><p class="caption">공통 규격의 일부를 재구성한 설명용 예시</p></article><article class="performance-panel"><span class="small-kicker">LOAD WHAT YOU NEED</span><h3>상세 메뉴는<br>필요할 때 불러오기.</h3><p>초기 화면에서 모든 상세 메뉴의 코드를 읽지 않도록 나눴습니다.</p><div class="performance-number"><strong>48.4<span>%</span></strong><span>당시 초기 JS gzip 합계 감소</span></div><div class="bar-chart" role="img" aria-label="2026년 10월 동일 조건 빌드 비교. 초기 JavaScript gzip 합계가 525759바이트에서 271248바이트로 약 48.4퍼센트 감소"><div class="chart-row"><span>이전</span><div class="bar-track"><span class="bar-before"></span></div><strong>526 KB</strong></div><div class="chart-row"><span>분리 후</span><div class="bar-track"><span class="bar-after"></span></div><strong>271 KB</strong></div></div><p class="chart-note">2026.10 당시 동일 조건의 공식 빌드 비교<br>525,759B → 271,248B · 반올림 표기<br><strong>화면 로딩 시간이나 실기기 속도 개선율은 아닙니다.</strong></p></article></div>
+    </section>
+
+    <section class="chapter chapter-tinted" id="evidence" aria-labelledby="evidence-title"><div class="section-shell">
+      <div class="split-heading"><div class="chapter-heading"><p class="eyebrow">06 / EVIDENCE, WITH BOUNDARIES</p><h2 id="evidence-title">구현한 동작과<br>검증 결과를 구분합니다.</h2></div><p>자동 검사와 실제 사용은 서로 다른 근거입니다. 무엇을 만들었는지, 어떤 환경에서 확인했는지, 다음에 무엇을 측정할지 나눴습니다.</p></div>
+      <div class="evidence-ledger"><article><span class="ledger-status">구현한 기준</span><h3>원본과 상태의 연결</h3><p>홈·상세의 역할, 같은 원본의 일정 표시, 충돌·백업 상태 처리, 개인·샘플 경계를 코드와 정책으로 구성했습니다.</p></article><article><span class="ledger-status verified">확보한 검증</span><h3>격리된 환경의 동작 확인</h3><p>기록 생성·수정과 새로고침 후 유지, 홈과 상세의 일치, 충돌·실패 처리, 대표 PC·320/390px 화면 동선을 확인한 기록이 있습니다.</p></article><article><span class="ledger-status next">다음 측정</span><h3>사용자에게 남는 효과</h3><p>할 일 파악 시간, 수정 누락, 실제 모바일 입력·저장 완료를 같은 조건의 시나리오로 비교할 계획입니다. 효과 수치는 측정 후 정합니다.</p></article></div>
+      <div class="verification-flow"><span>자동 검사</span><i aria-hidden="true">＋</i><span>격리 저장 API</span><i aria-hidden="true">＋</i><span>실제 브라우저 동선</span><p>동작의 근거를 쌓고, 효과는 별도로 측정합니다.</p></div>
+      <details class="evidence-details"><summary>대표 검증과 남은 조건 <span aria-hidden="true">+</span></summary><div><ul><li><strong>저장 동선:</strong> 격리 로컬 환경에서 메모 2건 생성 → 새로고침 유지 → 검색·수정 → 홈 일치 → 생성한 데이터 정리 확인.</li><li><strong>실패 정책:</strong> 오래된 버전 저장 거절, 백업 실패와 저장 후 대기 상태, 조회 장애·복구 시 기존 기록 보존.</li><li><strong>화면 접근:</strong> 대표 PC와 320/390px 화면에서 메뉴 이동·내용 접근·가로 넘침 확인. 버전과 시나리오별 범위로 판단.</li></ul><p>실제 iPhone/Safari, 모든 메뉴의 모든 CRUD, 전체 접근성 검증은 완료된 것으로 확대하지 않습니다. 사용자 인터뷰, 업무시간 절감률과 만족도는 아직 확보한 성과가 아닙니다.</p><p class="technical-note">기반 기술 · React / TypeScript / vinext·Vite / Cloudflare Workers·D1·R2 / Drizzle</p></div></details>
+    </div></section>
+
+    <section class="chapter section-shell reflection" id="reflection" aria-labelledby="reflection-title">
+      <div class="chapter-heading"><p class="eyebrow">07 / DECISIONS & THE NEXT STEP</p><h2 id="reflection-title">화면을 연결하는 일은,<br><span>기준을 연결하는 일.</span></h2></div>
+      <p class="reflection-lead">기능이 늘어날수록 같은 기록의 출처와 상태를 지키는 일이 중요해졌습니다. 홈과 상세의 역할, 원본 연결, 저장과 복구를 함께 정리하며 지속해서 개선할 수 있는 구조를 다듬었습니다.</p>
+      <h3 class="scope-title">프로젝트에서 다룬 범위</h3><div class="contribution-grid"><div><span>DEFINE</span><h3>문제와 우선순위</h3><p>개인 업무의 불편을 정리하고 기능의 목적과 범위를 선택</p></div><div><span>STRUCTURE</span><h3>정보와 동선</h3><p>홈·상세 역할, 탐색·작성, 원본을 연결하는 기준 구성</p></div><div><span>DECIDE</span><h3>상태와 복구</h3><p>충돌·실패·백업, 개인 저장과 샘플 체험의 경계 정의</p></div><div><span>ITERATE</span><h3>구현과 검증</h3><p>AI 도구의 조사·구현·검증 보조를 활용한 반복 개선</p></div></div>
+      <div class="next-question"><span>NEXT QUESTION</span><h3>“오늘 할 일을 더 빨리,<br>빠뜨리지 않고 파악하는가?”</h3><p>같은 가상 일정·메일·프로젝트 묶음으로 기존 방식과 대시보드를 비교하고, 완료 시간과 누락을 기록하는 것이 다음 단계입니다.</p></div>
+      <div class="closing-cta"><div><h3>화면으로 살펴보세요.</h3><p>샘플 체험은 개인 데이터와 분리되어 있으며,<br>체험 중 변경은 새로고침하면 초기화됩니다.</p></div><a class="primary-link" href="https://daywell-personal-dashboard.alswp0401.chatgpt.site/sample" target="_blank" rel="noopener">샘플 대시보드 보기 <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+  <footer class="site-footer section-shell"><a class="footer-brand" href="#top">MJ Dashboard <span>PRODUCT CASE STUDY</span></a><p>개인 작업 공간의 제품 설계와 지속 개선 · 2026.11</p><a href="../">사례 목록으로 <span aria-hidden="true">↗</span></a></footer>
+  <dialog class="image-dialog" aria-label="화면 이미지 확대"><div class="dialog-toolbar"><p id="image-caption">화면 확대</p><button type="button" class="dialog-close" aria-label="확대 이미지 닫기">닫기 <span aria-hidden="true">×</span></button></div><div class="dialog-image-wrap"><img id="expanded-image" alt=""></div></dialog>
+</body>
+</html>
