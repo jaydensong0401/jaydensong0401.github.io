@@ -12,6 +12,7 @@ https://jaydensong0401.github.io/
 | `/mailwork/` | 메일 요청을 업무로 연결하는 AI 업무 도구 |
 | `/llm-wiki/` | 조건·근거·정책 변경을 관리하는 업무용 AI |
 | `/visitor-system/` | QR 현장 등록·사전 방문 신청·관리자 운영 |
+| `/mj-dashboard/` | 홈·상세 역할, 원본 일정 연결, 저장·복구를 설계한 개인 작업 공간 |
 
 ## 구성
 
@@ -30,6 +31,7 @@ https://jaydensong0401.github.io/
 - Mailwork 화면: 공개 샘플의 가상 데이터 데모 캡처.
 - LLM Wiki 자료: 2026-10-26 작성한 예시 데이터 기반 소개 자료 8장.
 - 방문자 관리 화면: 원본 템플릿에 가상 데이터만 사용한 캡처.
+- MJ Dashboard 화면: 공개 샘플의 가상 데이터 PC·모바일 캡처.
 - 문서에 기재한 기능 확인과 실사용 성과 측정은 서로 다른 범위입니다.
 
 ## 로컬 확인
@@ -38,4 +40,4 @@ https://jaydensong0401.github.io/
 python -m http.server 8787 --bind 127.0.0.1
 ```
 
-정리일: 2026-11-02.
+정리일: 2026-11-03.
