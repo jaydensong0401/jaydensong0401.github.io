@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-11-09",
+  "projects": [
+    {
+      "id": "mailwork",
+      "name": "Mailwork",
+      "group": "AX·AI",
+      "summary": "업무 단위 정리와 사용자 판단 보존",
+      "insertBefore": "work",
+      "logo": "mailwork/logo.svg",
+      "favicon": "mailwork/favicon.svg"
+    },
+    {
+      "id": "wiki-chatbot",
+      "name": "Wiki-ChatBot",
+      "group": "AX·AI",
+      "summary": "정책의 문맥·조건·상태와 버전",
+      "insertBefore": "work",
+      "logo": "wiki-chatbot/logo.svg",
+      "favicon": "wiki-chatbot/favicon.svg"
+    },
+    {
+      "id": "visitor-system",
+      "name": "방문자 출입 관리",
+      "group": "서비스·운영",
+      "summary": "신청과 방문 상태·접근 시간·운영 이력",
+      "insertBefore": "experience",
+      "logo": "visitor-system/logo.png",
+      "favicon": "visitor-system/favicon.png"
+    },
+    {
+      "id": "mj-dashboard",
+      "name": "MJ Dashboard",
+      "group": "서비스·운영",
+      "summary": "홈과 상세의 역할·원본 연결·저장과 복구",
+      "insertBefore": "structure",
+      "logo": "mj-dashboard/logo-96.png",
+      "favicon": "mj-dashboard/favicon.svg"
+    },
+    {
+      "id": "glgym",
+      "name": "GLGYM",
+      "group": "서비스·운영",
+      "summary": "예약 자격·대기 순서·변경 승인 시점",
+      "insertBefore": "experience",
+      "logo": "glgym/logo.jpg",
+      "favicon": "glgym/favicon.png"
+    },
+    {
+      "id": "what-the-hatch",
+      "name": "What the Hatch?!",
+      "group": "OpenAI Game Builders Seoul",
+      "summary": "속성 규칙·부화 선택·상태 복구의 연결",
+      "insertBefore": "decisions",
+      "logo": "what-the-hatch/logo.png",
+      "favicon": "what-the-hatch/favicon.png"
+    },
+    {
+      "id": "last-track",
+      "name": "LAST TRACK : PROTOCOL",
+      "group": "OpenAI Game Builders Seoul",
+      "summary": "규칙과 연출·정보 전달·제작 검토 기준",
+      "insertBefore": "experience",
+      "logo": "last-track/logo.png",
+      "favicon": "last-track/favicon.png"
+    }
+  ]
+}
