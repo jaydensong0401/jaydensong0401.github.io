@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="light" name="color-scheme"/>
+<title>What the Hatch?! | Jayden Song 포트폴리오</title>
+<meta content="OpenAI Game Builders Seoul 참여작 What the Hatch?!의 속성 시스템, 부화 경험, 문제 해결과 팀 협업을 정리한 게임 제작 사례입니다." name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="What the Hatch?! · 여정이 부화의 결과가 되는 게임" property="og:title"/>
+<meta content="속성 선택과 조합, 부화장 접근 UX, 부활과 화면 피드백을 설계·구현한 제작 기록." property="og:description"/>
+<meta content="https://jaydensong0401.github.io/what-the-hatch/" property="og:url"/>
+<meta content="https://jaydensong0401.github.io/assets/what-the-hatch/cover.png" property="og:image"/>
+<meta content="#245f4b" name="theme-color"/>
+<link href="https://jaydensong0401.github.io/what-the-hatch/" rel="canonical"/>
+
+
+<link href="../assets/site.css" rel="stylesheet"/>
+<script defer="" src="../assets/site.js"></script>
+<style>
+    .hatch-toc{display:flex;flex-wrap:wrap;gap:10px 24px;padding:20px 0 25px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+    .hatch-toc a{border-bottom:1px solid var(--line);padding:4px 0}.hatch-toc a:hover{color:var(--green)}
+    .hatch-hero-figure{margin:0}.hatch-hero-figure .case-hero-image{width:100%}.hatch-hero-figure img{aspect-ratio:16/9;object-fit:cover}.hatch-hero-figure figcaption{margin-top:9px}
+    .hatch-role-table td:first-child{width:21%}.hatch-role-table td:nth-child(2){width:49%}.hatch-role-table td:last-child{width:30%}
+    .hatch-gallery-lead{margin-bottom:25px}.hatch-gallery-lead .image-frame{margin-top:0}.hatch-gallery-lead img,.hatch-screen-pair img{aspect-ratio:16/9;object-fit:contain;background:#10172d}
+    .hatch-note{font-size:12px;color:var(--muted);margin-top:17px}.hatch-team-label{display:block;color:var(--green);font-size:11px;font-weight:650;margin-bottom:7px}
+    .hatch-detail{padding:22px 0;border-top:1px solid var(--line)}.hatch-detail h3{font-size:21px;margin-bottom:11px}.hatch-detail p{font-size:13px;color:var(--muted);margin:9px 0}.hatch-detail strong{color:var(--ink)}
+    .hatch-evidence{padding-left:20px;color:var(--muted);font-size:12px;line-height:1.9}.hatch-evidence li{margin:10px 0}
+    @media(max-width:760px){.hatch-toc{gap:9px 17px;font-size:11px}.hatch-role-table{min-width:640px}.hatch-detail h3{font-size:19px}}
+    @media print{.hatch-toc{display:none}.hatch-role-table{min-width:0}}
+  </style>
+<link href="../assets/brands/what-the-hatch/favicon.png?v=20261109" rel="icon" type="image/png"/><link href="../assets/brands/what-the-hatch/apple-touch-icon.png?v=20261109" rel="apple-touch-icon"/><link href="../assets/brand-system.css" rel="stylesheet"/></head>
+<body id="top">
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="header"><div class="wrap header-inner">
+<a aria-label="전체 프로젝트로 이동" class="brand case-brand" href="../"><img alt="What the Hatch?!" class="project-logo" src="../assets/brands/what-the-hatch/logo.png"/><span>What the Hatch?!</span><small>PROJECT CASE STUDY</small></a>
+<nav aria-label="주 메뉴" class="nav"><a href="../#games">전체 게임</a><a href="#decisions">설계 판단</a><a href="#screens">실제 화면</a><a href="#evidence">검증 범위</a></nav>
+</div><div aria-hidden="true" class="header-progress" id="reading-progress"></div></header>
+<main id="main">
+<div class="wrap breadcrumb"><a href="../">포트폴리오</a> / 게임 / What the Hatch?!</div>
+<section class="case-hero"><div class="wrap">
+<div class="case-hero-grid"><div>
+<span class="label">OPENAI GAME BUILDERS SEOUL · 참여작</span>
+<div class="source-brand"><img alt="What the Hatch?! 현재 로고" src="../assets/brands/what-the-hatch/logo.png"/></div><h1>굴리는 여정이,<br/><em>부화할 세계를 바꾼다.</em></h1>
+<p>계란을 굴려 키우고, 지나온 여정과 선택에 따라 생명체를 부화시키는 게임입니다. 속성 시스템과 부화장 경험을 맡아, 추상적인 콘셉트를 플레이어가 보고 고를 수 있는 동작으로 연결했습니다.</p>
+<div class="actions"><a class="button primary" href="https://limitless-egg.pages.dev/" rel="noopener noreferrer" target="_blank">게임 플레이 ↗</a><a class="button" href="#contribution">담당 작업 보기 ↓</a></div>
+</div><figure class="hatch-hero-figure"><button aria-label="What the Hatch 게임 커버 확대" class="case-hero-image" data-enlarge="" type="button"><img alt="깨진 알 속 생명체와 냉장고에서 우주로 이어지는 길을 표현한 What the Hatch 게임 커버" fetchpriority="high" height="810" src="../assets/what-the-hatch/cover.png" width="1440"/></button><figcaption class="caption">게임 커버 일러스트 · 실제 플레이 캡처는 아래 화면 모음에서 확인할 수 있습니다.</figcaption></figure></div>
+<dl class="case-meta"><div><dt>TYPE</dt><dd>3D 굴리기 · 성장 · 수집·부화</dd></div><div><dt>TEAM</dt><dd>기획·개발을 함께한 3인 팀</dd></div><div><dt>MY FOCUS</dt><dd>속성·작명 · 부화장 UX · 동작 개선</dd></div><div><dt>TECH</dt><dd>Godot · GDScript · Web/WASM</dd></div></dl>
+<p class="source-note">행사 참여 사실은 사용자 확인 기준입니다. 아래 개인 작업의 근거는 2026.09.03에 정리한 제작 이력과 당시 구현 기록이며, 이후의 후속 개발 전체를 개인 실적으로 합산하지 않았습니다.</p>
+</div></section>
+<nav aria-label="전체 사례 목차" class="wrap hatch-toc"><a href="#experience">게임의 선택 구조</a><a href="#contribution">개인 역할과 팀 작업</a><a href="#decisions">설계 판단</a><a href="#screens">실제 화면 모음</a><a href="#solving">문제 해결</a><a href="#collaboration">협업 방식</a><a href="#evidence">근거와 검증 범위</a><a href="#learning">배운 점</a></nav>
+<section class="section" id="experience"><div class="wrap">
+<div class="section-heading"><div class="micro">01 / EXPERIENCE</div><div><h2>더 크게 굴릴까,<br/>지금 부화할까?</h2><p>성장이 보상인 동시에 위험이 되도록 설계한 팀의 게임 콘셉트입니다. 작고 깨지기 쉬운 계란이 커질수록 같은 통로가 더 좁게 느껴집니다.</p></div></div>
+<div class="two-col"><article class="insight"><h3>성장과 위험을 함께</h3><p>집과 도시, 야외와 우주로 이어지는 길에서 계란을 굴립니다. 거리와 수집, 구간 통과가 성장을 만들고, 커진 몸집은 장애물을 통과하기 어렵게 만듭니다.</p></article><article class="insight"><h3>결과를 선택의 흔적으로</h3><p>부화장에 멈춰 현재 여정을 결과로 만들거나, 다음 구간을 향해 더 굴릴 수 있습니다. 획득한 속성과 플레이 기록이 부화의 모습과 이름에 이어지도록 했습니다.</p></article></div>
+<div class="flow"><article class="flow-item"><span>01</span><h3>굴리기</h3><p>길과 장애물을 읽고 이동합니다.</p></article><article class="flow-item"><span>02</span><h3>성장</h3><p>진행과 수집이 몸집을 바꿉니다.</p></article><article class="flow-item"><span>03</span><h3>속성 선택</h3><p>획득한 속성을 장착하고 조합합니다.</p></article><article class="flow-item"><span>04</span><h3>부화 결정</h3><p>지금 멈출지 더 갈지 고릅니다.</p></article><article class="flow-item"><span>05</span><h3>결과와 도감</h3><p>여정이 만든 생명체를 확인합니다.</p></article></div>
+<div class="callout"><strong>전시장에서 처음 만나는 사람을 기준으로</strong>설명을 오래 듣지 않아도 시작하고, 실패하고, 다시 시도할 수 있는 흐름이 팀의 설계 기준이었습니다. 이 의도와 실제 관람객 효과의 측정은 구분합니다.</div>
+</div></section>
+<section class="section" id="contribution"><div class="wrap">
+<div class="section-heading"><div class="micro">02 / MY CONTRIBUTION</div><div><h2>게임 전체의 콘셉트 안에서,<br/>하나의 계통을 끝까지 연결했습니다.</h2><p>상위 콘셉트와 월드, 배포는 팀 작업입니다. 개인 기여는 속성·부화 결과와 그 주변 경험을 구체화한 범위로 설명합니다.</p></div></div>
+<div class="table-wrap"><table class="detail-table hatch-role-table"><thead><tr><th scope="col">영역</th><th scope="col">개인 담당</th><th scope="col">팀 작업과의 경계</th></tr></thead><tbody>
+<tr><td>속성과 조합</td><td>속성 데이터·장착 상태·물리 효과·획득·조합 판정을 나누어 설계·구현. 여정과 부화 결과를 연결하는 하위 규칙 구성.</td><td>성장·굴리기·즉사·재시작 등 기본 게임 루프는 팀이 구성.</td></tr>
+<tr><td>이름과 결과 서사</td><td>조합 등급과 작명 규칙을 만들고 획득한 속성이 결과 이름에 남도록 설계.</td><td>전체 세계관과 월드 진행, 부화 생명체의 공용 파츠 체계는 팀의 상위 기획.</td></tr>
+<tr><td>HUD와 부화장 UX</td><td>속성 슬롯·획득 알림·개별 색·3D 아이콘, 부화장 접근 고리와 피드백을 구성.</td><td>타이틀·부화·도감의 전체 화면은 팀의 UI 제작 범위.</td></tr>
+<tr><td>실패와 회복</td><td>부화 입력·판정 초기화 문제를 분리해 수정. 안전 지점·성장 크기·물리 상태를 고려한 부활 흐름 개선.</td><td>전체 물리·맵·위험물 설계를 개인 단독 작업으로 표현하지 않음.</td></tr>
+<tr><td>시각 품질과 문서</td><td>소품 재질 보완, 랩에서 만든 환경·조명 이식, 속성별 구현 상태와 실제 동작을 문서화.</td><td>월드 제작·전체 병합·최종 웹 배포는 팀 내 다른 담당의 작업.</td></tr>
+</tbody></table></div>
+<p class="source-note">기여 근거: 기존 개인 제작 이력과 속성·부화장·부활 관련 변경 기록. 역할은 확인된 작업 내용으로 표기하며 기여율이나 전체 제작 성과로 환산하지 않았습니다.</p>
+</div></section>
+<section class="section" id="decisions"><div class="wrap">
+<div class="section-heading"><div class="micro">03 / DESIGN DECISIONS</div><div><h2>보이지 않던 규칙을,<br/>보고 선택할 수 있게.</h2><p>핵심은 기능을 많이 더하는 일이 아니라, 플레이어가 획득과 위험·결과를 같은 흐름으로 이해하게 만드는 일이었습니다.</p></div></div>
+<article class="decision"><span class="num">01</span><div><h3>여정의 영향을 손으로 고르게</h3><p>바닥에서 속성을 획득하고 장착 상태로 이어지게 했습니다. 제작 이력 기준 42종의 속성과 3칸 장착을 정의하고, 데이터·효과·조합·상태를 별도 모듈로 나눴습니다.</p></div><div class="result"><strong>설계 의도</strong>“플레이 기록이 결과를 바꾼다”는 추상적인 설명을 획득과 선택이라는 구체적인 행동으로 옮겼습니다.</div></article>
+<article class="decision"><span class="num">02</span><div><h3>같은 속성은 같은 색과 아이콘으로</h3><p>바닥의 속성을 글자만으로 표시하지 않고 개별 아이콘과 색으로 구분했습니다. HUD 슬롯과 획득 알림도 같은 표현을 사용해 시선이 이동해도 대상을 이어서 읽게 했습니다.</p></div><div class="result"><strong>사용자 경험</strong>분류색 하나로 뭉개지던 개별 속성의 차이를 보여주고, 수집한 대상과 화면의 상태를 연결했습니다.</div></article>
+<article class="decision"><span class="num">03</span><div><h3>부화장의 판정 범위를 화면에</h3><p>상호작용 범위와 같은 크기의 고리를 바닥에 표시하고, 진입하면 밝기와 움직임이 바뀌게 했습니다. 위험물과 혼동되던 색도 부화장 고유의 마젠타로 구분했습니다.</p></div><div class="result"><strong>설계 기준</strong>“가까이 가면 된다”는 안내만 두지 않고, 어느 범위에서 어떤 행동이 가능한지 화면으로 설명했습니다.</div></article>
+<article class="decision"><span class="num">04</span><div><h3>모든 속성에 즉시 효과를 약속하지 않기</h3><p>당시 속성을 물리 효과 구현·조건부·후속 구현·이름 반영 범위로 나누어 기록했습니다. 즉시 효과가 없는 속성도 결과 작명에는 반영하되, 설명과 실제 동작이 다른 문구는 정정했습니다.</p></div><div class="result"><strong>운영과 문서</strong>목록에 있다는 사실과 플레이 중 작동한다는 사실을 구분했습니다. 이 분류는 당시 제작 기록이며 현재 전체 버전의 완성도 수치가 아닙니다.</div></article>
+</div></section>
+<section class="section" id="screens"><div class="wrap">
+<div class="section-heading"><div class="micro">04 / ACTUAL SCREENS</div><div><h2>타이틀에서 여정과 부화장까지,<br/>실제 화면으로 확인합니다.</h2><p>프로젝트에 보관된 게임 캡처입니다. 모든 이미지를 처음부터 펼쳐 두었고, 이미지를 선택하면 확대할 수 있습니다.</p></div></div>
+<figure class="hatch-gallery-lead"><button aria-label="What the Hatch 타이틀 화면 확대" class="image-frame" data-enlarge="" type="button"><img alt="What the Hatch 실제 타이틀 화면과 시작 안내" height="720" loading="lazy" src="../assets/what-the-hatch/title.png" width="1280"/></button><figcaption class="caption">타이틀 · 처음 플레이하는 사용자의 시작점. 커버 일러스트와 구분되는 실제 게임 화면입니다.</figcaption></figure>
+<div class="gallery-pair hatch-screen-pair"><figure><button aria-label="What the Hatch 부화장 HUD 화면 확대" class="image-frame" data-enlarge="" type="button"><img alt="부화장 접근 안내와 HUD를 함께 보여주는 What the Hatch 게임 화면" height="720" loading="lazy" src="../assets/what-the-hatch/hatchery.png" width="1280"/></button><figcaption class="caption">부화장 · 멈추고 결과를 확인하는 선택 지점과 화면 안내.</figcaption></figure><figure><button aria-label="What the Hatch 지역 HUD 화면 확대" class="image-frame" data-enlarge="" type="button"><img alt="진행 중인 지역과 플레이 상태가 HUD에 표시되는 What the Hatch 게임 화면" height="720" loading="lazy" src="../assets/what-the-hatch/location.png" width="1280"/></button><figcaption class="caption">여정 · 현재 지역과 플레이 상태를 확인하는 HUD.</figcaption></figure></div>
+<p class="hatch-note">이 캡처는 프로젝트의 보관 자료입니다. 이후 개발 중인 화면·규칙과 차이가 있을 수 있으며, 실제 플레이 링크의 버전과 제작 당시 개인 작업 기록을 구분해 보실 수 있습니다.</p>
+</div></section>
+<section class="section" id="solving"><div class="wrap">
+<div class="section-heading"><div class="micro">05 / PROBLEM SOLVING</div><div><h2>수치를 바꾸기 전에,<br/>동작이 연결되는 지점을 확인했습니다.</h2><p>마감 이후에는 부화·회복·가시성처럼 플레이 흐름을 끊는 문제를 우선 정리했습니다. 아래는 당시 변경 기록에 남아 있는 개인 작업 사례입니다.</p></div></div>
+<article class="hatch-detail"><span class="hatch-team-label">부화 입력 · 판정 · 초기화</span><h3>부화장 앞에서 입력해도 아무 일도 일어나지 않았다.</h3><p><strong>문제</strong> — 접근 안내는 나오지만 부화 입력이 처리되지 않았습니다. 판정 범위를 키워도 결과가 같아, 숫자만의 문제로 보기 어려웠습니다.</p><p><strong>확인</strong> — 진행도 조건이 첫 부화를 막고 있었고, 입력이 다른 UI에서 먼저 처리될 수 있었습니다. 범위 설정도 판정 노드가 생성되기 전에 호출돼 실제로 반영되지 않았습니다.</p><p><strong>수정</strong> — 불필요한 진행도 조건과 입력 경로를 정리하고, 부화장 자체가 판정 범위를 소유하도록 바꿨습니다. 판정 형태와 바닥 고리의 범위를 일치시켜, 설정과 표시가 같은 기준을 쓰게 했습니다.</p><p><strong>남긴 기준</strong> — 값이 적용되지 않을 때는 값의 크기뿐 아니라 적용 시점과 대상의 생명주기를 확인합니다.</p></article>
+<article class="hatch-detail"><span class="hatch-team-label">부활 · 안전 지점 · 물리 상태</span><h3>되살아나자마자 다시 죽는 부활을 고쳤다.</h3><p><strong>문제</strong> — 낭떠러지 근처에서 부활하거나, 커진 계란이 바닥에 끼거나, 낙하 속도를 유지한 채 이동하면서 회복 기회가 연쇄 소모됐습니다.</p><p><strong>확인</strong> — 단순 접촉 횟수가 안전을 뜻하지 않았고, 고정 높이는 성장하는 물체에 맞지 않았습니다. 일반 좌표 변경과 물리 엔진의 상태 변경도 서로 다른 경로였습니다.</p><p><strong>수정</strong> — 실제 발밑 지형과 기울기·위험 여부를 확인해 안전 지점을 저장했습니다. 바닥면과 현재 크기로 복원 위치를 계산하고, 공통 물리 이동 경로와 부활 직후 유예·알림을 연결했습니다.</p><p><strong>남긴 기준</strong> — ‘안전’이라는 이름을 믿기보다 안전을 판정하는 조건을 확인하고, 같은 행동을 수행하는 경로를 하나로 모읍니다.</p></article>
+<article class="hatch-detail"><span class="hatch-team-label">소품 재질 · 파일 소유권 · 이식</span><h3>다른 담당의 파일을 덮어쓰지 않고 시각 품질을 개선했다.</h3><p><strong>문제</strong> — 금속이나 표시 장치의 재질감이 약했지만, 해당 소품을 배치하는 파일은 다른 담당의 작업 영역이었습니다.</p><p><strong>수정</strong> — 소품의 의미에 따라 재질을 보완하는 별도 모듈을 만들고, 기존에 정한 색과 배치를 유지했습니다. 독립 랩에 완성된 환경·조명도 필요한 범위만 본 게임으로 이식했습니다.</p><p><strong>남긴 기준</strong> — 보완할 표현과 이미 합의된 기획 값을 구분합니다. 검증 환경이 없을 때는 미검증 사실과 확인할 항목을 병합 담당에게 명시적으로 인계했습니다.</p></article>
+</div></section>
+<section class="section" id="collaboration"><div class="wrap">
+<div class="section-heading"><div class="micro">06 / COLLABORATION</div><div><h2>사람과 AI가 함께 작업해도,<br/>수정 범위와 책임은 분명하게.</h2><p>짧은 일정에서 개인 담당의 계통을 완성하고, 팀의 게임 루프에 연결하는 방식으로 진행했습니다. 전체 일정과 최종 병합·배포는 팀 오너가 관리했습니다.</p></div></div>
+<div class="two-col"><article class="insight"><h3>새 기능은 독립 모듈로</h3><p>속성 데이터·상태·효과·조합·획득을 신규 파일로 나누어, 다른 사람이 작업 중인 공통 파일을 동시에 크게 바꾸지 않도록 했습니다. 공통 연결부는 필요한 범위만 조정했습니다.</p></article><article class="insight"><h3>랩에서 확인하고 필요한 부분을 이식</h3><p>독립 실험 환경에서 실루엣과 표현을 확인하고, 본 게임에는 완성된 기능을 옮겼습니다. 다른 팀원이 만든 월드 환경을 가져오는 경우에는 원래 제작 범위와 이식 작업을 구분했습니다.</p></article><article class="insight"><h3>AI를 구현·조사의 보조로</h3><p>기능 구조화, 구현과 버그 원인 분리에 AI 코딩 도구를 활용했습니다. 정한 규칙을 임의로 바꾸기보다 작업 범위와 결과를 검토하고, 사람이 확정한 기획과 맞추는 데 사용했습니다.</p></article><article class="insight"><h3>검사를 사용 경험으로 오해하지 않기</h3><p>코드가 실행된다는 검사만으로 부화와 안전한 부활을 증명할 수 없었습니다. 입력·판정·물리 상태가 실제로 연결되는지 확인하는 기준을 문제별로 구체화했습니다.</p></article></div>
+<div class="callout"><strong>담당과 완료의 구분</strong>개인 제작 이력은 속성·작명·부화장 UX·문제 해결을 중심으로 정리했습니다. 전체 기획 확정, 월드 제작, 공용 UI, 통합·배포를 개인 단독 제작으로 포함하지 않았습니다.</div>
+</div></section>
+<section class="section" id="evidence"><div class="wrap">
+<div class="section-heading"><div class="micro">07 / EVIDENCE &amp; SCOPE</div><div><h2>제작 기록과 실제 효과를<br/>서로 다른 근거로 남깁니다.</h2><p>기존 제작 이력의 사실을 공개 사례로 다시 정리했습니다. 코드 양이나 커밋 수를 제품의 재미·품질·개인 기여율로 해석하지 않습니다.</p></div></div>
+<div class="scope-grid"><article class="scope"><span class="label">기록으로 확인한 범위</span><h3>무엇을 만들고 바꿨는가</h3><ul><li>2026.08.31 행사 제출 이후 2026.09.03까지 정리된 개인 제작 기록.</li><li>속성 데이터·장착·효과·획득·조합 및 작명 체계의 구현.</li><li>부화장 접근 표시와 입력·판정 초기화 문제의 수정 기록.</li><li>안전 지점·물리 상태를 고려한 부활과 시각 피드백 개선.</li><li>팀과 개인의 담당 구분, 독립 모듈·랩·검증 인계 방식.</li><li>프로젝트 보관 캡처와 공개 게임 링크.</li></ul></article><article class="scope"><span class="label">별도 확인이 필요한 범위</span><h3>문서만으로 주장하지 않는 것</h3><ul><li>현재 배포판의 모든 구간·부화·도감 동선의 완주 검증.</li><li>후속 v2 설계와 개발 결과 전체에 대한 개인 기여.</li><li>관람객 수, 실제 플레이 횟수, 정량 피드백과 재도전율.</li><li>재미·몰입감·조작 이해도에 대한 사용자 비교 실험.</li><li>수상 실적과 대회 전체 결과.</li><li>팀의 전체 산출물을 개인 단독 결과로 표현하는 것.</li></ul></article></div>
+<ul class="hatch-evidence"><li><strong>기술 구조</strong> — Godot 4.7.2와 GDScript로 게임을 구성하고 Web/WASM으로 배포했습니다. 공동 도감은 팀의 서버 계통이며 Cloudflare Pages·Workers를 사용합니다.</li><li><strong>자료 기준</strong> — 기존 개인 제작 이력(2026.09.03), 프로젝트 README, 속성 명세, 부화장·회복 관련 변경 기록을 참조했습니다. 상세 작업의 과거 수치를 현재 버전 전체의 보장으로 확대하지 않았습니다.</li><li><strong>공개 범위</strong> — 플레이 링크와 공개 가능한 화면·설명만 연결했습니다. 내부 저장소 접근 정보, 원본 소스 전체, 계정과 운영 데이터는 포함하지 않습니다.</li></ul>
+</div></section>
+<section class="section" id="learning"><div class="wrap">
+<div class="section-heading"><div class="micro">08 / TAKEAWAYS</div><div><h2>기능을 만드는 것에서,<br/>플레이어가 믿는 동작으로.</h2><p>이 프로젝트에서 배운 것은 규칙을 더하는 속도만이 아니라, 화면이 약속한 행동과 실제 판정이 일치해야 한다는 점입니다.</p></div></div>
+<div class="two-col"><article class="insight"><h3>추상적인 의도를 행동 단위로</h3><p>여정에 의미를 주겠다는 콘셉트를 속성 획득·장착·작명으로 구체화했습니다. 플레이어가 직접 고르는 행동과 결과 사이에 연결을 만드는 경험이었습니다.</p></article><article class="insight"><h3>보이지 않는 상태를 설명하기</h3><p>상호작용 범위와 부활 상태처럼 보이지 않던 규칙을 화면 피드백과 문서로 드러냈습니다. 다음 검증에서는 처음 플레이하는 사람이 도움 없이 부화하고 다시 시도하는 과정을 확인할 수 있습니다.</p></article></div>
+<div class="callout"><strong>다음 확인 질문</strong>처음 플레이하는 사람이 획득한 속성, 부화할 수 있는 범위, 실패 후 남은 기회를 화면만 보고 이해할 수 있는가? 같은 짧은 동선으로 관찰하고 개선할 항목입니다.</div>
+</div></section>
+
+<section class="all-cases wrap" id="all-project-cases"><h2>다른 프로젝트도 살펴보세요.</h2><div><a class="case-chip" href="../mailwork/">Mailwork</a><a class="case-chip" href="../wiki-chatbot/">Wiki-ChatBot</a><a class="case-chip" href="../visitor-system/">방문자 출입 관리</a><a class="case-chip" href="../mj-dashboard/">MJ Dashboard</a><a class="case-chip" href="../glgym/">GLGYM</a><a class="case-chip" href="../last-track/">LAST TRACK : PROTOCOL</a></div></section></main>
+<section class="closing"><div class="wrap closing-inner"><div><div class="micro" style="color:#d1e0d5;margin-bottom:8px">OPENAI GAME BUILDERS SEOUL</div><h2>What the Hatch?!</h2><p>속성 선택 · 부화 결과 · 화면 피드백 · 협업과 문제 해결</p></div><a class="button" href="https://limitless-egg.pages.dev/" rel="noopener noreferrer" target="_blank">게임 플레이 ↗</a></div></section>
+<footer class="wrap footer"><span>© 2026 Jayden Song · 게임 제작 사례</span><span>소개 갱신 2026.11.09 · 개인 작업 근거 2026.09.03 기준</span></footer>
+<dialog aria-labelledby="image-dialog-title" id="image-dialog"><div class="dialog-head"><strong id="image-dialog-title">화면 보기</strong><button id="close-image" type="button">닫기 ✕</button></div><img alt="" id="enlarged-image"/></dialog>
+</body>
+</html>
